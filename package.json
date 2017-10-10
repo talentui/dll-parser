@@ -2,9 +2,13 @@
   "name": "@beisen/talent-ui-dll-parser-util",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "lihe3 <lihe3@corp.beisencorp.com>",
-  "license": "MIT",
+  "description": "dll 解析方法",  
+  "author": {
+    "name": "lihe3",
+    "email": "lihe3@beisen.com"
+  },
   "dependencies": {
     "webpack": "^3.6.0"
-  }
+  },
+  "license": "MIT"
 }
