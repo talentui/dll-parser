@@ -2,8 +2,12 @@
 
 # 用法
 ```js 
-  // 返回值是 DllReferencePlugins
+  /*** 
+    1. 参数 ：dllList就是传入的dll列表，如 ['@beisen/talent-ui-dll-foundation']
+    2. 返回值： dllReferencePlugins, 使用时，将该返回值合并到webpack plugins内即可
+  **/
+  
   const dllReferencePlugins = require('@beisen/talent-ui-dll-parser-util')(
-    options.dllList
+    dllList
   ) 
 ```
