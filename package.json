@@ -1,7 +1,10 @@
 {
-  "name": "talent-ui-dll-parser-util",
+  "name": "@beisen/talent-ui-dll-parser-util",
   "version": "1.0.0",
   "main": "index.js",
   "author": "lihe3 <lihe3@corp.beisencorp.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^3.6.0"
+  }
 }
