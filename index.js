@@ -23,8 +23,8 @@ const parseDll = dllList => {
     }
   });
 };
-
-module.exports = (dllList = []) => {
+//生成DllReferencePlugin
+const generateDllReferencePlugins = (dllList = []) => {
   const DllReferencePlugins = parseDll(dllList).map(dll => {
     return new (require("webpack")).DllReferencePlugin({
       manifest: require(dll.manifest),
@@ -33,3 +33,8 @@ module.exports = (dllList = []) => {
   });
   return DllReferencePlugins;
 };
+
+module.exports = {
+  parseDll,
+  generateDllReferencePlugins,
+}
