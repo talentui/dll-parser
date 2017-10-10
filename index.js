@@ -1,7 +1,7 @@
 const namingConvention = require("@beisen/talent-ui-dll-naming-convention");
 const { buildProd, appRoot } = require("./constants.js");
 
-//解决dll方法
+//解析dll方法
 const parseDll = dllList => {
   return dllList.map(dll => {
     if (typeof dll === "object") {
