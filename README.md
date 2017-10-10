@@ -3,7 +3,7 @@
 # 用法
 ```js 
   // 返回值是 DllReferencePlugins
-  const dllReferencePlugins = require('../talent-ui-dll-parser-util')(
+  const dllReferencePlugins = require('@beisen/talent-ui-dll-parser-util')(
     options.dllList
   ) 
 ```
