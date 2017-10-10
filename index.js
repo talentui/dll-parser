@@ -24,8 +24,8 @@ const parseDll = dllList => {
   });
 };
 //生成DllReferencePlugin
-const generateDllReferencePlugins = (dllList = []) => {
-  const DllReferencePlugins = parseDll(dllList).map(dll => {
+const generateDllReferencePlugins = (dllListAfterParse) => {
+  const DllReferencePlugins = dllListAfterParse.map(dll => {
     return new (require("webpack")).DllReferencePlugin({
       manifest: require(dll.manifest),
       context: appRoot
