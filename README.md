@@ -3,11 +3,15 @@
 # 用法
 ```js 
   /*** 
-    1. 参数 ：dllList就是传入的dll列表，如 ['@beisen/talent-ui-dll-foundation']
-    2. 返回值： dllReferencePlugins, 使用时，将该返回值合并到webpack plugins内即可
+    parseDll
+      1. 参数 ：dllList就是传入的dll列表，如 ['@beisen/talent-ui-dll-foundation']
+      2. 返回值：解析后的dllList信息，包含file 和 manifest.json 文件路径
+    generateDllReferencePlugins：
+      1. 参数 ： 经过parseDll 解析后的dllList
+      2. 返回值： dllReferencePlugins 插件，将其合并到webpack plugins中即可
   **/
-  
-  const dllReferencePlugins = require('@beisen/talent-ui-dll-parser-util')(
-    dllList
-  ) 
+
+ const { generateDllReferencePlugins, parseDll } = require('@beisen/talent-ui-dll-parser-util');
+ const dllListAfterParser = parseDll(dllList);
+ const dllReferencePlugins = generateDllReferencePlugins(dllListAfterParser);
 ```
