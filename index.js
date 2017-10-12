@@ -1,7 +1,7 @@
 const namingConvention = require("@talentui/dll-naming");
 
 module.exports = class DllReference {
-    constructor(dllList, buildProd) {
+    constructor(dllList=[], buildProd) {
         this.rawDllList = dllList;
         this.buildProd = buildProd;
         this.dllList = this.parseDll();
