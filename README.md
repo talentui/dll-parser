@@ -2,7 +2,7 @@
 
 # 用法
 ```js 
-  /*** 
+  /***
   引入DllParser 类  
   **/
   const DllParser = require('@talentui/dll-parser');
