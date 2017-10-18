@@ -2,16 +2,25 @@
 
 # 用法
 ```js 
-  /*** 
-    parseDll
-      1. 参数 ：dllList就是传入的dll列表，如 ['@beisen/talent-ui-dll-foundation']
-      2. 返回值：解析后的dllList信息，包含file 和 manifest.json 文件路径
-    generateDllReferencePlugins：
-      1. 参数 ： 经过parseDll 解析后的dllList
-      2. 返回值： dllReferencePlugins 插件，将其合并到webpack plugins中即可
+  /***
+  引入DllParser 类  
   **/
-
- const { generateDllReferencePlugins, parseDll } = require('@beisen/talent-ui-dll-parser-util');
- const dllListAfterParser = parseDll(dllList);
- const dllReferencePlugins = generateDllReferencePlugins(dllListAfterParser);
+  const DllParser = require('@talentui/dll-parser');
+  /**
+    生成实例
+    参数：
+      1. dllList： 项目中引用的dll列表，如['@talentui/dll-react']
+      2. isProduction:是否是生产环境
+  **/
+  const DllParserInstance = new DllParser(dllList, isProduction);
+  /**
+  获取解析过后的dllList列表
+  **/
+  const dllListAfterParse = DllParserInstance.parseDll();//解析后的dllList列表
+  /**
+  获取配置好的dllReferencePlugin插件；
+  参数：
+    1. root： 项目的跟目录
+  **/
+  const dllReferencePlugins = DllParserInstance.getRefPlugin(root);
 ```
