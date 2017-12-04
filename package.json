@@ -1,6 +1,6 @@
 {
   "name": "@talentui/dll-parser",
-  "version": "1.0.1",
+  "version": "0.0.0-development",
   "main": "index.js",
   "description": "dll 解析方法",
   "author": {
@@ -8,8 +8,7 @@
     "email": "lihe3@beisen.com"
   },
   "dependencies": {
-    "@talentui/dll-naming": "^1.0.0",
-    "webpack": "^3.6.0"
+    "@talentui/dll-naming": "*"
   },
   "license": "MIT",
   "repository": {
@@ -18,5 +17,14 @@
   },
   "engines": {
     "node": ">=6.0.0"
+  },
+  "scripts": {
+    "cm": "git-cz",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "devDependencies": {
+    "@talentui/cz-package-changelog": "^1.0.0",
+    "commitizen": "^2.9.6",
+    "semantic-release": "^8.2.0"
   }
 }
