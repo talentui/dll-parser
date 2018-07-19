@@ -1,30 +1,33 @@
 {
-  "name": "@talentui/dll-parser",
-  "version": "0.0.0-development",
-  "main": "index.js",
-  "description": "dll 解析方法",
-  "author": {
-    "name": "lihe3",
-    "email": "lihe3@beisen.com"
-  },
-  "dependencies": {
-    "@talentui/dll-naming": "*"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/talentui/dll-parser.git"
-  },
-  "engines": {
-    "node": ">=6.0.0"
-  },
-  "scripts": {
-    "cm": "git-cz",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
-  },
-  "devDependencies": {
-    "@talentui/cz-package-changelog": "^1.0.0",
-    "commitizen": "^2.9.6",
-    "semantic-release": "^8.2.0"
-  }
+    "name": "@talentui/dll-parser",
+    "version": "0.0.0-development",
+    "main": "index.js",
+    "description": "dll 解析方法",
+    "author": {
+        "name": "lihe3",
+        "email": "lihe3@beisen.com"
+    },
+    "dependencies": {
+        "@talentui/dll-naming": "*"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/talentui/dll-parser.git"
+    },
+    "engines": {
+        "node": ">=6.0.0"
+    },
+    "scripts": {
+        "cm": "git-cz",
+        "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    },
+    "devDependencies": {
+        "@talentui/cz-package-changelog": "^1.0.0",
+        "commitizen": "^2.9.6",
+        "semantic-release": "^8.2.0"
+    },
+    "peerDependencies": {
+        "webpack": "^4.16.1"
+    }
 }

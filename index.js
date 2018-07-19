@@ -1,4 +1,5 @@
 const namingConvention = require("@talentui/dll-naming");
+const path = require('path');
 
 module.exports = class DllReference {
     constructor(dllList=[], buildProd) {
@@ -12,16 +13,16 @@ module.exports = class DllReference {
             if (typeof dll === "object") {
                 return dll;
             } else if (typeof dll === "string") {
-                let packageName = dll;
-                let version = require(`${dll}/package.json`).version;
+                let packagePath = path.resolve(process.cwd(), 'node_modules', dll);
+                let version = require(`${packagePath}/package.json`).version;
                 let { filename, manifest } = namingConvention(
-                    packageName,
+                    dll,
                     version,
                     this.buildProd
                 );
                 return {
-                    file: `${dll}/dist/${filename}`,
-                    manifest: `${dll}/dist/${manifest}`
+                    file: `${packagePath}/dist/${filename}`,
+                    manifest: `${packagePath}/dist/${manifest}`
                 };
             } else {
                 console.error("dllList 格式不正确");
